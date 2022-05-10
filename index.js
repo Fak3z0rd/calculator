@@ -106,7 +106,7 @@ const numberButtons = document.querySelectorAll("[data-number]");
 const operationButtons = document.querySelectorAll("[data-operation]");
 const equalButton = document.querySelector("[data-equal]");
 const deleteButton = document.querySelector("[data-delete]");
-const clearAllButton = document.querySelector("[data-allclearAll]");
+const allClearButton = document.querySelector("[data-allclear]");
 const previousTextElement = document.querySelector("[data-previous]");
 const currentTextElement = document.querySelector("[data-current]");
 
@@ -126,7 +126,7 @@ operationButtons.forEach((button) => {
     });
 });
 
-clearAllButton.addEventListener("click", () => {
+allClearButton.addEventListener("click", () => {
     calculator.clearAll();
     calculator.updateDisplay();
 });
@@ -136,7 +136,7 @@ deleteButton.addEventListener("click", () => {
     calculator.updateDisplay();
 });
 
-equalButton.addEventListener("click", () => {
+equalButton.addEventListener("click", (button) => {
     calculator.operate();
     calculator.updateDisplay();
 });
