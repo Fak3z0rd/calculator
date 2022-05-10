@@ -11,5 +11,7 @@ It works only with the 4 basic operations:
 - Divide
 - Multiply
 
+You can use by clicking on the buttons or typing in your keyboard.
+
 
 
