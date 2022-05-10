@@ -1,6 +1,4 @@
-# CALCULATOR
-
-https://fak3z0rd.github.io/calculator/
+# [CALCULATOR](https://fak3z0rd.github.io/calculator/)
 
 This is a simple calculator made with HTML, CSS and JavaScript.
 
