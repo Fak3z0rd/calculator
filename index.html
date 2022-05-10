@@ -4,31 +4,36 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Calculator</title>
         <link rel="stylesheet" href="style.css" />
         <script src="./index.js"></script>
     </head>
     <body>
-        <header></header>
-        <main>
-            <div id="calculator">
-                <div id="display"></div>
-                <div id="buttons">
-                    <div id="1" class="buttons">1</div>
-                    <div id="2" class="buttons">2</div>
-                    <div id="3" class="buttons">3</div>
-                    <div id="4" class="buttons">4</div>
-                    <div id="5" class="buttons">5</div>
-                    <div id="6" class="buttons">6</div>
-                    <div id="7" class="buttons">7</div>
-                    <div id="8" class="buttons">8</div>
-                    <div id="9" class="buttons">9</div>
-                    <div id="," class="buttons">,</div>
-                    <div id="0" class="buttons">0</div>
-                    <div id="=" class="buttons">=</div>
-                </div>
+        <header>CALCULATOR</header>
+        <main class="calculator-grid">
+            <div class="display">
+                <div class="previous-operand" data-previous></div>
+                <div class="current-operand" data-current></div>
             </div>
+            <button class="button span-two" data-allclear>AC</button>
+            <button class="button" data-delete>DEL</button>
+            <button class="button" data-operation>/</button>
+            <button class="button" data-number>1</button>
+            <button class="button" data-number>2</button>
+            <button class="button" data-number>3</button>
+            <button class="button" data-operation>*</button>
+            <button class="button" data-number>4</button>
+            <button class="button" data-number>5</button>
+            <button class="button" data-number>6</button>
+            <button class="button" data-operation>+</button>
+            <button class="button" data-number>7</button>
+            <button class="button" data-number>8</button>
+            <button class="button" data-number>9</button>
+            <button class="button" data-operation>-</button>
+            <button class="button" data-number>.</button>
+            <button class="button" data-number>0</button>
+            <button class="button span-two" data-equal>=</button>
         </main>
-        <footer></footer>
+        <footer>Made by Vinicius Meireles</footer>
     </body>
 </html>
