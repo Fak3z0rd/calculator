@@ -34,6 +34,11 @@ class Calculator {
                 result = this.subtract(a, b);
                 break;
             case "/":
+                if (b === 0) {
+                    this.divideByZeroError = true;
+                    result = "error"
+                    break;
+                }
                 result = this.divide(a, b);
                 break;
             case "*":
@@ -42,6 +47,7 @@ class Calculator {
             default:
                 return;
         }
+
         this.currentOperand = result;
         this.operation = undefined;
         this.previousOperand = "";
@@ -98,6 +104,12 @@ class Calculator {
             }`;
         } else {
             this.previousTextElement.textContent = "";
+        }
+        if (this.divideByZeroError) {
+            this.previousTextElement.textContent = "Can't divide by zero";
+            this.currentTextElement.textContent = "";
+            this.currentOperand = ""
+            this.divideByZeroError = false
         }
     }
 }
