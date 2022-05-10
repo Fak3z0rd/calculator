@@ -154,3 +154,26 @@ equalButton.addEventListener("click", (button) => {
     calculator.operate();
     calculator.updateDisplay();
 });
+
+window.addEventListener("keydown", (e) => {
+    let key = convert(e.key);
+    let buttons = document.querySelectorAll(".button");
+    buttons.forEach((button) => {
+        if (button.textContent === key) {
+            button.click();
+            return;
+        }
+    });
+});
+
+function convert(key) {
+    if (key === "Backspace") {
+        return "DEL";
+    } else if (key === "Enter") {
+        return "=";
+    } else if (key === "Delete") {
+        return "AC";
+    } else {
+        return key;
+    }
+}
