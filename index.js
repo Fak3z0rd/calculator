@@ -36,7 +36,7 @@ class Calculator {
             case "/":
                 if (b === 0) {
                     this.divideByZeroError = true;
-                    result = "error"
+                    result = "";
                     break;
                 }
                 result = this.divide(a, b);
@@ -97,6 +97,14 @@ class Calculator {
     }
 
     updateDisplay() {
+        if (this.divideByZeroError) {
+            this.previousTextElement.textContent = "Cannot divide by zero";
+            this.currentTextElement.textContent = "";
+            // this.currentOperand = "";
+            this.divideByZeroError = false;
+            return;
+        }
+
         this.currentTextElement.textContent = this.convertDisplayNumber(this.currentOperand);
         if (this.operation != null) {
             this.previousTextElement.textContent = `${this.convertDisplayNumber(this.previousOperand)} ${
@@ -104,12 +112,6 @@ class Calculator {
             }`;
         } else {
             this.previousTextElement.textContent = "";
-        }
-        if (this.divideByZeroError) {
-            this.previousTextElement.textContent = "Can't divide by zero";
-            this.currentTextElement.textContent = "";
-            this.currentOperand = ""
-            this.divideByZeroError = false
         }
     }
 }
